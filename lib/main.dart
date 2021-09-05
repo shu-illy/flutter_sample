@@ -42,23 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: <Widget>[
-          Icon(Icons.add),
-          Icon(Icons.share),
-        ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+        child: ElevatedButton(
+          child: Text('次へ'),
+          onPressed: () {
+            // ここに押したら反応するコードを書く
+            // 画面遷移のコード
+          },
         ),
       ),
       floatingActionButton: FloatingActionButton(
