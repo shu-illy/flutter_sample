@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'next_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -44,14 +45,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: Text('次へ'),
-          onPressed: () {
-            // ここに押したら反応するコードを書く
-            // 画面遷移のコード
-          },
-        ),
-      ),
+          child: ElevatedButton(
+              child: Text('次へ'),
+              onPressed: () {
+                // ここに押したら反応するコードを書く
+                // 画面遷移のコード
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NextPage(),
+                  ),
+                );
+              })),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',

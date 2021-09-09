@@ -32,6 +32,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_flavorizr: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -74,3 +75,38 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+
+  flavors:
+    development:
+      app:
+        name: "Development"
+
+      android:
+        applicationId: "com.example.dev"
+
+      ios:
+        bundleId: "com.example.dev"
+
+    staging:
+      app:
+        name: "Staging"
+
+      android:
+        applicationId: "com.example.staging"
+      ios:
+        bundleId: "com.example.staging"
+
+    production:
+      app:
+        name: "Production"
+
+      android:
+        applicationId: "com.example"
+      ios:
+        bundleId: "com.example"
